@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .details {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .column {
+            width: 130px;
+        }
+
+        .heading {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome {{account.name}}</p>
+    <div class="details">
+        <div class="column">
+            <div class="heading">Account</div>
+            <div>{{account.account_no}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">USERNAME</div>
+            <div>{{account.name}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">TOTAL BALANCE</div>
+            <div>{{account.amount}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">ADDRESS</div>
+            <div>{{account.address}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">PHONE</div>
+            <div>{{account.mobile_no}}</div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

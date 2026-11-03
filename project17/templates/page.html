@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family:Arial;
+            margin:0;
+            background-color:white;
+        }
+        .header{
+            text-align:center;
+            padding:45px;
+        }
+        .header h1{
+            font-family:Georgia;
+            padding:45px;
+            margin:10px;
+        }
+        .header h2{
+            font-family:Georgia;
+            font-size:45px;
+            margin:10px;
+        }
+        .navbar{
+            width:90%;
+            margin:auto;
+            background:#d8e8e3;
+            padding:18px;
+            text-align:center;
+        }
+        .navbar a {
+            text-decoration:none;
+            color:black;
+            font-weight:bold;
+            margin:0 15px;
+            font-size:18px;;
+
+        }
+        .accountform{
+            width:500px;
+            margin-bottom:30px auto;
+        }
+        .accountform h2{
+            text-align:center;
+        }
+        .accountform p{
+            display:flex;
+            margin-bottom: 15px;
+        }
+        .accountform label{
+            width:250px;
+            padding:7px;
+        }
+        .accountform input{
+            width: 250px;
+            padding:7px;
+        }
+        .buttons{
+            text-align: center;
+        }
+        .buttons button{
+            padding:8px 20px;
+            margin: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1>SDFC BANK</h1>
+        <h2>EXTRAORDINARY SERVICES</h2>
+    </div>
+    <div class="navbar">
+        <a href="{%url 'home'%}">HOME</a>
+        <a href="{%url 'newaccount'%}">New Account</a>
+        <a href="{%url 'balance'%}">Balance</a>
+        <a href="{%url 'deposit'%}">Deposit</a>
+        <a href="{%url 'withdraw'%}">Withdraw</a>
+        <a href="{%url 'transfer'%}">Transfer</a>
+        <a href="{%url 'closeaccount'%}">Close A/c</a>
+        <a href="{%url 'about'%}">About</a>
+    </div>
+    <center>
+    <div class="accountform">
+        <h2>{{heading}}</h2>
+        <form method="POST">
+            {%csrf_token%}
+            {{form.as_p}}
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">clear</button>
+            </div>
+        </form>
+    </div>
+    </center>
+</body>
+
+       

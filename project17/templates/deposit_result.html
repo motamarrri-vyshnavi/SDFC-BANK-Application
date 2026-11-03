@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .details {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .column {
+            width: 130px;
+        }
+
+        .heading {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .header h2{
+            font-family:Georgia;
+            font: size 45px;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>DEPOSITDETAILS</h2>
+    <div class="details">
+        <div class="column">
+            <div class="heading">Account</div>
+            <div>{{account.account_no}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">USERNAME</div>
+            <div>{{account.name}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">BEFORE BALANCE</div>
+            <div>{{before_balance}}</div>
+        </div>
+         <div class="column">
+            <div class="heading">DEPOSIT AMOUNT</div>
+            <div>{{deposit_amount}}</div>
+        </div>
+        <div class="column">
+            <div class="heading">Total BALANCE</div>
+            <div>{{total_balance}}</div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
